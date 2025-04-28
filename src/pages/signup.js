@@ -2,7 +2,6 @@ import '../App.css'
 import React, { useState} from 'react';
 import { Outlet, Link } from "react-router-dom";
 const SignUp = () => {
-  //  const navigate = useNavigate();
   
     const [formData, setFormData] = useState({
       username: '',
@@ -12,25 +11,6 @@ const SignUp = () => {
       cnic: '',
       designation: ''
     });
-  
-    // const handleChange = (e) => {
-    //   setFormData(prev => ({
-    //     ...prev,
-    //     [e.target.name]: e.target.value
-    //   }));
-    // };
-  
-    // const handleSubmit = async (e) => {
-    //   e.preventDefault();
-    //   try {
-    //     await axios.post('http://localhost:5000/api/signup', formData);
-    //     alert('Sign up successful!');
-    //     navigate('/login');
-    //   } catch (error) {
-    //     console.error(error.response?.data || error.message);
-    //     alert('Sign up failed. Try again.');
-    //   }
-    // };
     const handleChange = (e) => {
       const { name, value } = e.target;
       setFormData(prev => ({
